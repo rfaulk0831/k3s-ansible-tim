@@ -8,7 +8,6 @@
   loop:
     - rancher
     - rancher/k3s
-  become: yes
 
 - name: Insert registries into /etc/rancher/k3s/registries.yaml
   blockinfile:
@@ -16,4 +15,4 @@
     block: "{{ custom_registries_yaml }}"
     mode: '0600'
     create: true
-  become: yes
+    
